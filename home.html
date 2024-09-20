@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section class="flex justify-center">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+              <div class="artboard artboard-demo phone-3">
+                <div class="stats shadow">
+                    <div class="stat">
+                      <div class="stat-title">Account Blance</div>
+                      <div id="current-blance" class="stat-value">89400</div>
+
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <!-- feature Start -->
+                 <div class="flex gap-5 flex-wrap">
+                    <button id="add-mony" class="btn btn-lg">Add Mony</button>
+                    <button id="cash-out" class="btn btn-lg">Cash Out</button>
+                    <button id="transection-btn" class="btn btn-lg">Transaction</button>
+                 </div>
+                 <!-- feature End -->
+                 <div class="divider"></div>
+                 <!-- form add mony -->
+                 <div id="add-mony-conatainer" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Amount</span>
+                        </label>
+                        <input type="text" id="amount" placeholder="amount" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin</span>
+                        </label>
+                        <input type="password" id="pin-number" autocomplete="off" placeholder="password" class="input input-bordered" required />
+                        
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="add-mony-btn" class="btn btn-primary">Add Mony</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- form cash out -->
+                  <div id="cash-out-container" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Amount</span>
+                        </label>
+                        <input type="text" id="cash-out-amount" placeholder="amount" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin</span>
+                        </label>
+                        <input type="password" id="pin-number-cash-out" autocomplete="off" placeholder="password" class="input input-bordered" required />
+                        
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="cash-out-btn" class="btn btn-primary">Cash Out</button>
+                      </div>
+                    </form>
+                  </div>
+
+                  <!-- featurs section start -->
+                   <div id="featurse-container" class="hidden">
+                    <h1 class="text-4xl text-center">Transection History
+                    </h1>
+                    <div id="transection-history" class="space-y-2">
+
+                    </div>
+                   </div>
+              </div>
+            </div>
+          </div>
+    </section>
+    <script src="js/utility.js"></script>
+    <script src="js/addMony.js"></script>
+    <script src="js/cashOut.js"></script>
+    <script src="js/features.js"></script>
+</body>
+</html>
